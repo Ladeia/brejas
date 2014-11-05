@@ -1,0 +1,17 @@
+{
+	"name": "Brejas",
+	"description": "Um app para calcular a cerveja mais barata dentre diversos volumes.",
+	"launch_path": "/index.html",
+	"developer": {
+		"name": "Antonio Ladeia",
+		"url": "http://www.antonioladeia.com"
+	},
+	"icons": {
+		"60": "/images/icon60.png",
+		"128": "/images/icon128.png"
+	},
+	"fullscreen": "true",
+	"default_locale": "pt-BR",
+	"orientation": ["portrait", "landscape-secondary"],
+	"version": "1.0"
+}
