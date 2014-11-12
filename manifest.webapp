@@ -1,7 +1,6 @@
 {
 	"name": "Brejas",
-	"description": "Um app para calcular a cerveja mais barata dentre diversas embalagens. 
-	Github: https://github.com/Ladeia/brejas.git",
+	"description": "Um app para calcular a cerveja mais barata dentre diversas embalagens. Github: https://github.com/Ladeia/brejas.git",
 	"launch_path": "/index.html",
 	"developer": {
 		"name": "Antonio Ladeia",
