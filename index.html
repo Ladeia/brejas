@@ -2,62 +2,13 @@
 <html lang="pt-br">
 	<head>
 		<meta charset="UTF-8">
-		<link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+		<meta name="viewport"
+			content="width=device-width, initial-scale=1, maximum-scale=1">
 		<link href="css/style/headers.css" rel="stylesheet" type="text/css">
 		<link href="css/style/input_areas.css" rel="stylesheet" type="text/css">
 		<link href="css/style/buttons.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" type="text/css" href="css/stylesheet.css">
 		<title>Brejas</title>
-		<style>
-			section
-			{
-				background-color:#fff500;
-				color:#771E18;
-				font-weight: bold;
-			}
-
-			section[role="region"] > header:first-child
-			{
-				background-color:#fff500;
-			}
-			section[role="region"] > header:first-child h1
-			{
-    		line-height: 3rem;
-				color:#771E18;
-			}
-
-			section[role="region"] > header:first-child
-			{
-				height: 3rem;
-			}
-
-			input[type="number"]
-			{
-				height: 1.5rem;
-				width:80%;
-				margin-left:10%;
-			}
-
-			.bb-button
-			{
-				height: 2rem;
-				font-size: 1.3rem;
-				width:80%;
-				margin-left:10%;
-				line-height: 2rem;
-				background-color:#771E18;
-			}
-
-			.bb-button.recommend
-			{
-				background-color:#771E18;
-			}
-
-			.best
-			{
-				border: 4px dashed #771E18;
-			}
-
-		</style>
 	</head>
 	<body>
 	<section role="region">
@@ -66,79 +17,50 @@
 	  </header>
 	</section>
 		<section>
-			<div id="litrao-container">
-				<span>Litrão - 1000ml</span>
-				<input id="litrao" class="cerva" type="number" step="any"></input>
+			<div>
+				<p id="litrao-container">
+					Litrão - 1000ml
+					<input id="litrao" class="cerva" type="number" step="any"></input>
+				</p>
 			</div>
-			<div id="classica-container">
-				<span>Clássica - 600ml</span>
-				<input id="classica" class="cerva" type="number" step="any"></input>
+			<div>
+				<p id="classica-container">
+					Clássica - 600ml
+					<input id="classica" class="cerva" type="number" step="any"></input>
+				</p>
 			</div>
-			<div id="longneck-container">
-				<span>Long Neck - 355ml</span>
-				<input id="longneck" class="cerva" type="number" step="any"></input>
+			<div>
+				<p id="longneck-container">
+					Long Neck - 355ml
+					<input id="longneck" class="cerva" type="number" step="any"></input>
+				</p>
 			</div>
-			<div id="safadinha-container">
-				<span>Safadinha - 300ml</span>
-				<input id="safadinha" class="cerva" type="number" step="any"></input>
+			<div>
+				<p id="safadinha-container">
+					Safadinha - 300ml
+					<input id="safadinha" class="cerva" type="number" step="any"></input>
+				</p>
 			</div>
-			<div id="latao-container">
-				<span>Latão - 550ml</span>
-				<input id="latao" class="cerva" type="number" step="any"></input>
+			<div>
+				<p id="latao-container">
+					Latão - 550ml
+					<input id="latao" class="cerva" type="number" step="any"></input>
+				</p>
 			</div>
-			<div id="lata-container">
-				<span>Lata - 350ml</span>
-				<input id="lata" class="cerva" type="number" step="any"></input>
+			<div>
+				<p id="lata-container">
+					Lata - 350ml
+					<input id="lata" class="cerva" type="number" step="any"></input>
+				</p>
 			</div>
-			<div id="piriguete-container">
-				<span>Piriguete - 269ml</span>
-				<input id="piriguete" class="cerva" type="number" step="any"></input>
+			<div>
+				<p id="piriguete-container">
+					Piriguete - 269ml
+					<input id="piriguete" class="cerva" type="number" step="any"></input>
+				</p>
 			</div>
 			<a href="#" class="bb-button recommend" id="calcular">Calcular</a>
 		</section>
 		<script src="js/main.js" type="text/javascript"></script>
-		<script>
-		function clear_best()
-		{
-			var div = document.getElementsByTagName('div');
-			for( var i=0; i<div.length; i++ )
-			{
-					div[ i ].className = '';
-			}
-		};
-
-		var cervejas = {
-	    litrao: 1000,
-	    classica: 600,
-	    longneck: 355,
-	    safadinha: 300,
-	    latao: 550,
-	    lata: 350,
-	    piriguete: 269,
-		};
-
-		var _calcular = document.getElementById('calcular');
-
-		_calcular.addEventListener('click', function() {
-				clear_best();
-		    var max = -1, cervejaMax = '';
-		    for (var cerveja in cervejas) {
-		      var n = parseFloat(document.getElementById(cerveja).value.replace(",","."));
-		      if (n > 0) {
-
-		      	var x = cervejas[cerveja]/n;  // O que quer que x seja
-		        if (x > max) {
-		        	max = x;
-		          cervejaMax = cerveja;
-		        }
-		    	}
-		    }
-				document.getElementById(cervejaMax+"-container").className = 'best';
-		    console.log("melhor valor: " + max);
-		    console.log("cerveja: " + cervejaMax);
-		}, false);
-
-
-		</script>
 	</body>
 </html>
